@@ -1,0 +1,55 @@
+.l{float: left;}
+.r{float: right;}
+.m{margin: 0 auto;}
+*{padding: 0;margin: 0;}
+.head{width: 100%;display: flex;flex-direction: column;}
+/*
+头部*/
+.container{width: 100%;background: #333333;height: 37px;}
+.head-top,.head-bottom{width: 1134px;overflow: hidden;}
+.head-top-l{overflow: hidden;line-height: 32px;}
+.head-top-l a,i{color:#a4a4a4;font-size: 13px;}
+i{width: 1px;height: 10px;background:#858585;float: left;margin: 13px -10px;}
+.head-top-l li{float: left;padding-right: 20px;}
+
+/*
+头部左边部分*/
+
+.head-top-r{overflow: hidden;line-height: 32px;}
+.head-top-r li{float: left;padding-right: 20px;}
+.head-top-r a,i{color:#a4a4a4;font-size: 13px;}
+.head-top-r li:last-child{text-align: center;width: 100px;background: #424242;height: 37px;}
+.head-top-r li:last-child span{font-size: 25px;position: absolute;top: 0;margin-left: 3px;}
+
+/*
+头部底下部分
+*/
+.head-bottom{display: flex;flex-direction: row;height: 95px;align-items:center;/*指定垂直居中*/overflow: hidden;}
+.logo{width: 55px;height: 52px;margin-right: 140px;}
+.nav{overflow: hidden;margin-right: 68px;}
+.nav li{float: left;padding: 10px;}
+.nav a{color: #41423e;}
+.form{height: 50px;width: 278px;margin-left: 29px;}
+.form input{width:208px;height:50px;float: left;border: 1px solid #e0e0e0;outline: none;padding-left: 17px;}
+.form button{float:left;width: 50px;height: 52px;border: 1px solid #e0e0e0;outline:none;cursor:pointer;background: #ffffff;}
+.form span{font-size: 25px;}
+
+
+/*
+页脚部分*/
+.bottom-top{width: 1132px;height: 130px;line-height: 130px;border-bottom: 1px solid #858585;}
+.bottom-top li{float: left;text-align: center;width: 226px;}
+.bottom-top span{font-size: 26px;}
+.bottom-top a{color: #616161;font-size: 16px;}
+.bottom-top i{margin-top: 57px;height: 20px;}
+
+
+/*
+侧边导航部分*/
+
+.navigation{position: fixed;width: 60px;right: 0px;top: 300px;}
+.navigation li{width: 60px;height: 70px;background: #ffffff;margin-bottom: 5px;text-align: center;}
+.navigation p{font-size: 13px;}
+.navigation span{font-size: 30px;}
+.navigation a{color: #999999;}
+.go{display: none;}

@@ -1,0 +1,87 @@
+/*
+样式内容*/
+
+.l{float: left;}
+.r{float: right;}
+.m{margin: 0 auto;}
+*{padding: 0;margin: 0;}
+
+/*
+轮播图部分*/
+
+.banner{width:100%;}
+.banner-img{overflow: hidden;width: 1134px;position: relative;height: 462px;}
+.banner-ul-img{overflow: hidden;}
+.banner-ul-img ul li{position: absolute;transition: 2s;opacity: 0;}
+.banner-ul-img ul li:last-child{opacity: 1;}
+.sidebar-btn span{font-size: 45px;}
+.sidebar-btn{overflow: hidden;}
+.le{position:absolute;left: 230px;top: 200px;}
+.rt{position: absolute;right: 0px;top: 200px;}
+.btn1{list-style: none;position: absolute;bottom: 20px;z-index: 200;right: 20px;cursor: pointer;}
+.btn2{width: 15px;height: 15px;background-color: rgba(0,0,0,0.4);float: left;border-radius: 100%;margin-right: 14px;}
+.active{background-color: rgba(0,0,0,0.9);}
+.none{display: none;}
+#le,#rt{color: #858585;}
+#rt:hover{background:#222222;opacity: 0.5;color: #ffffff;}
+#le:hover{background:#222222;opacity: 0.5;color: #ffffff;}
+
+
+
+
+
+
+/*轮播图侧边导航*/
+.sidebar{width: 230px;height: 461px;background: #696969;position:absolute;left: 0;z-index: 200;background: rgba(105, 105, 105, 0.7);}
+.sidebar ul{width: 230px;height: 462px;}
+.sidebar ul li{padding: 11px 15px;text-align: center;}
+.sidebar ul li a{color: #ffffff;}
+.sidebar ul li a span{float: right;}
+.sidebar_hidden{width: 901px;height: 460px;background-color: #fff;border: 1px solid #e7e1cd;box-shadow: 0 8px 16px rgba(0,0,0,.18);position: absolute;top: 0;left: 100%;display: none;z-index: 99;}
+.sidebar ul li:hover{background: #ff6700;}
+.sidebar ul li:hover .sidebar_hidden{display: block;}
+
+
+
+
+/*菜单栏广告位*/
+.fare{width: 100%;overflow: hidden;margin-top: 13px;}
+.fare-holder{width: 1134px;overflow: hidden;display: flex;flex-direction: row}
+.fare-holder img{width: 293px;height: 158px;}
+.fare-1{padding-left:5px;width: 230px;height: 158px;margin-right: 11px;background:url("../img/bg.jpg") no-repeat;}
+.fare-2,.fare-3{width: 290px;height: 158px;margin-right: 12px;}
+.fare-4{width: 290px;height: 158px;}
+.fare-1 li{float: left;text-align: center;padding: 10px;}
+.fare-1 span{font-size: 25px;}
+.fare-1 a{color: #c1bebc;font-size: 13px;}
+
+
+
+/*广告图*/
+.ad{width: 100%;margin: 20px 0 20px 0;}
+.holder{width: 1132px;overflow: hidden;}
+.holder img{width: 1132px;height: 123px;}
+
+
+
+
+
+.content{width: 100%;overflow: hidden;display: flex;flex-direction:column;background: #f5f5f5;}
+.content-top{width: 1132px;height: 50px;display: flex;line-height: 50px;justify-content: space-between}
+.content-top span{width: 20px;border-radius: 10px;background: #858585;color: #fffdfe;}
+.content-top h1{font-size: 20px;}
+.content-bottom{width: 1132px;height: 568px;display:flex;flex-direction: row;}
+.content-imgl{overflow: hidden;width: 218px;}
+.content-imgl img{width: 218px;height: 576px;}
+.content-imgr{width: 900px;height: 576px;margin-left: 14px;text-align: center;}
+.content-imgr li{float: left;width: 215px;height: 279px;background:#ffffff;margin: 0px 5px 10px 5px;transition: all .2s linear;}
+.content-imgr a{line-height: 30px;}
+.content-imgr-phone{width: 215px;height: 179px;margin-top: 25px;}
+.content-imgr-phone img{width: 110px;height: 159px;}
+.content-imgr p{color: red;}
+/*
+礼品卡部分*/
+.present{display: flex;flex-direction: column;width: 1132px;overflow: hidden;margin-bottom: 20px;}
+.present-bottom li{float: left;text-align: center;padding-left: 55px;}
+
+

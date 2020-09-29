@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script>
+        window.onload=function () {
+            var btn = document.getElementById("btn1");
+            var t1 = document.getElementById("t1");
+            btn.onclick = function () {
+                //1创建对象
+                var xhr = new XMLHttpRequest();
+                //2调用open
+                xhr.open('post', 'index3.php'); //设置请求参数 ?用来拼接 &
+                //设置请求头
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                //是来设置请求体内容类型  ，   参数查询字符串类型
+                //3发送
+                xhr.send();
+                //4事件绑定
+                xhr.onreadystatechange = function () {
+                    //判断返回结果
+                    if (xhr.readyState == 4) {
+                        if (xhr.status == 200) {
+                            var arr = JSON.parse(xhr.response); //转换为字符串
+                            console.log(arr);
+                            var str = ``;
+                            for (var i = 0; i < arr.length; i++) {
+                                str += ` <tr style='text-align: center;'>
+                                          <td>${arr[i].id}</td>
+                                          <td>${arr[i].name}</td>
+                                          <td>${arr[i].yw}</td>
+                                          <td>${arr[i].sx}</td>
+                                          <td>${arr[i].yy}</td>
+                                          <td>${arr[i].ty}</td>
+                                         </tr>`;
+                            }
+                            t1.innerHTML = str;
+                            /*/!*行 头 体*!/
+                            console.log(xhr.status); //状态码
+                            console.log(xhr.statusText);//状态字符串
+                            console.log(xhr.getAllResponseHeaders());//响应头
+                            console.log(xhr.response);//响应体就是响应的内容*/
+                        } else {
+                            console.log('链接失败');
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+    </script>
+</head>
+<script>
+
+</script>
+<body>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>获取学员成绩</h2>
+        </div>
+        <div class="panel-body">
+
+            <br>
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr style='text-align: center;'>
+                    <td>学生ID</td>
+                    <td>学生姓名</td>
+                    <td>语文成绩</td>
+                    <td>数学成绩</td>
+                    <td>英语成绩</td>
+                    <td>体育成绩</td>
+                </tr>
+                </thead>
+                <tbody id="t1">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <button id="btn1" class="btn btn-primary">获取学生信息</button>
+    <a class="btn btn-default" href="AddGrades.html" role="button">添加学生信息</a>
+</div>
+</body>
+</html>
